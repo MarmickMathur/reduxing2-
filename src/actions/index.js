@@ -7,7 +7,7 @@ export const fetchPosts = () => {
 
     dispatch({
       type: "FETCH_POSTS",
-      payload: res,
+      payload: res.data,
     });
   };
 };

@@ -7,8 +7,13 @@ class PostList extends React.Component {
     return this.props.blogs.map((post) => {
       return (
         <div key={post.id} className="item">
-          <h1>{post.title}</h1>
-          <p>{post.body}</p>
+          <i className=" large middle aligned icon user" />
+          <div className="content">
+            <div className="desription">
+              <h1>{post.title}</h1>
+              <p>{post.body}</p>
+            </div>
+          </div>
         </div>
       );
     });
@@ -19,12 +24,12 @@ class PostList extends React.Component {
   }
   render() {
     // console.log(this.props.blogs);
-    return <div className="ui list divided">{this.renderList()}</div>;
+    return <div className="ui relaxed list divided">{this.renderList()}</div>;
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return { blogs: state.blogs };
 };
 
